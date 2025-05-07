@@ -148,7 +148,12 @@ select {
     font-style: italic;
 }
 
-.todo-list{
+#todo-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.todo{
     padding: 1rem;
     display: flex;
     flex-direction: row;

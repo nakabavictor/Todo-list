@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="js/javascript.js"></script>
+    <script src="js/javascript.js" defer></script>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -48,19 +48,21 @@
                 </select>
             </div>
         </div>
-        <div class="todo-list">
+        <div id="todo-list">
             <!--
-            <p>Exemplo minha tarefa</p>
-            <div class="icones">
-                <button type="submit">
-                <i class="fa-solid fa-check"></i>
+            <div class="todo">
+                <p>Exemplo minha tarefa</p>
+                <div class="icones">
+                    <button class="finish" type="submit">
+                        <i class="fa-solid fa-check"></i>
                     </button>
-                <button type="submit">
-                    <i class="fa-solid fa-x"></i>
-                </button>
-                <button type="submit">
-                    <i class="fa-solid fa-pen"></i>
-                </button>
+                    <button class="edit" type="submit">
+                        <i class="fa-solid fa-pen"></i>
+                    </button>
+                    <button class="exclude" type="submit">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </div>
             </div>
             -->
         </div>
