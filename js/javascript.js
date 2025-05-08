@@ -2,12 +2,12 @@ const todoForm = document.querySelector("#todo-form");
 const todoInput = document.querySelector("#todo-input");
 const todoList = document.querySelector("#todo-list");
 const toolbarr = document.querySelector("#toolbar");
-const editForm = document.querySelector("#edit-form");
-const editInput = document.querySelector("#edit-input");
 const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 const searchInput = document.querySelector("#search-input");
 const eraseBtn = document.querySelector("#erase-button");
 const filterBtn = document.querySelector("#filter-select");
+
+let inputAntigo;
 
 const toggleForms = () => {
   editForm.classList.toggle("hide");
@@ -30,11 +30,6 @@ const savetodo = (text) => {
   finishBTN.classList.add("finish");
   finishBTN.innerHTML = '<i class="fa-solid fa-check"></i>';
   icones.appendChild(finishBTN);
-
-  const editBTN = document.createElement("button");
-  editBTN.classList.add("edit");
-  editBTN.innerHTML = '<i class="fa-solid fa-pen"></i>';
-  icones.appendChild(editBTN);
 
   const ExcludeBTN = document.createElement("button");
   ExcludeBTN.classList.add("delete");
@@ -63,13 +58,15 @@ todoForm.addEventListener("submit", (e) => {
 document.addEventListener("click", (e) => {
   const elementoBuscado = e.target;
   const parente = elementoBuscado.parentNode.parentNode;
+  let todoTitle;
+
+  if (parente && parente.querySelector("p")) {
+    todoTitle = parente.querySelector("p").innerText;
+  }
+
   if (elementoBuscado.classList.contains("finish")) {
     console.log("clicou pra finalizar");
     parente.classList.toggle("done");
-  }
-  if (elementoBuscado.classList.contains("edit")) {
-    console.log("clicou pra editar");
-    toggleForms();
   }
   if (elementoBuscado.classList.contains("delete")) {
     console.log("clicou pra excluir");

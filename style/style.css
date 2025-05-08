@@ -43,10 +43,6 @@ select {
     padding: 0.25rem 0.5rem;
 }
 
-.hide {
-    display: none;
-}
-
 .todo-container {
     max-width: 450px;
     margin: 3rem auto 0;
@@ -61,14 +57,12 @@ select {
     border-bottom: 1px solid #ccc;
 }
 
-#todo-form,
-#edit-form {
+#todo-form {
     padding: 1rem;
     border-bottom: 1px solid #ccc;
 }
 
-#todo-form p,
-#edit-form p {
+#todo-form p {
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
@@ -81,10 +75,6 @@ select {
     margin-right: 0.3rem;
 }
 
-#cancel-edit-btn {
-    margin-top: 1rem;
-    color: #444;
-}
 
 #toolbar {
     padding: 1rem;
