@@ -24,6 +24,18 @@
                 </button>
             </div>
         </form>
+        <form id="todo-edit" class="hide">
+            <p>Edite:</p>
+            <div class="form-control">
+                <input type="text" id="input-edit" placeholder="O que você vai fazer?">
+                <button type="submit">
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button type="submit">
+                    cancel
+                </button>
+            </div>
+        </form>
         <div id="toolbar">
             <div id="search">
                 <p>Pesquisar</p>
@@ -45,6 +57,9 @@
                 <div class="icones">
                     <button class="finish" type="submit">
                         <i class="fa-solid fa-check"></i>
+                    </button>
+                    <button class="edit" type="submit">
+                        <i class="fa-solid fa-pen"></i>
                     </button>
                     <button class="exclude" type="submit">
                         <i class="fa-solid fa-x"></i>

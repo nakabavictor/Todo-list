@@ -44,6 +44,8 @@ select {
 }
 
 .todo-container {
+    display: flex;
+    flex-direction: column;
     max-width: 450px;
     margin: 3rem auto 0;
     background-color: #fdfdfd;
@@ -57,7 +59,7 @@ select {
     border-bottom: 1px solid #ccc;
 }
 
-#todo-form {
+#todo-form, #todo-edit {
     padding: 1rem;
     border-bottom: 1px solid #ccc;
 }
@@ -75,6 +77,9 @@ select {
     margin-right: 0.3rem;
 }
 
+.hide{
+    display: none;
+}
 
 #toolbar {
     padding: 1rem;
