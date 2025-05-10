@@ -120,10 +120,7 @@ select {
     flex: 1;
 }
 
-#todo-list{
-    display: flex;
-    flex-direction: column;
-}
+
 
 .todo{
     padding: 1rem;

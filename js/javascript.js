@@ -93,7 +93,7 @@ document.addEventListener("click", (e) => {
     parente.remove();
   }
   if (elementoBuscado.classList.contains("edit")) {
-    console.log("clicou pra editarr");
+    console.log("clicou pra editar");
     toggleForms();
     editInput.value = todoTitle;
     inputAntigo = todoTitle;
