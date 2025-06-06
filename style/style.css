@@ -1,146 +1,145 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Verdana;
-    color: #333;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Verdana;
+  color: #333;
 }
 
 body {
-    background-image: url("../imgs/download\ \(1\).jpeg");
-    background-position: center;
-    background-size: cover;
+  background-image: url("../imgs/download\ \(1\).jpeg");
+  background-position: center;
+  background-size: cover;
 }
 
 button {
-    background-color: #fdfdfd;
-    color: #102f5e;
-    border: 2px solid #102f5e;
-    padding: 0.3rem 0.6rem;
-    font-size: 1rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #fdfdfd;
+  color: #102f5e;
+  border: 2px solid #102f5e;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button:hover {
-    background-color: #102f5e;
+  background-color: #102f5e;
 }
 
-button:hover>i {
-    color: #fff;
+button:hover > i {
+  color: #fff;
 }
 
 button i {
-    pointer-events: none;
-    color: #102f5e;
-    font-weight: bold;
+  pointer-events: none;
+  color: #102f5e;
+  font-weight: bold;
 }
 
 input,
 select {
-    padding: 0.25rem 0.5rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .todo-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 450px;
-    margin: 3rem auto 0;
-    background-color: #fdfdfd;
-    padding: 1.5rem;
-    border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  max-width: 450px;
+  margin: 3rem auto 0;
+  background-color: #fdfdfd;
+  padding: 1.5rem;
+  border-radius: 15px;
 }
 
 .todo-container header {
-    text-align: center;
-    padding: 0 1rem 1rem;
-    border-bottom: 1px solid #ccc;
+  text-align: center;
+  padding: 0 1rem 1rem;
+  border-bottom: 1px solid #ccc;
 }
 
-#todo-form, #todo-edit {
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
+#todo-form,
+#todo-edit {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
 }
 
 #todo-form p {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .form-control {
-    display: flex;
+  display: flex;
 }
 
 .form-control input {
-    margin-right: 0.3rem;
+  margin-right: 0.3rem;
 }
 
-.hide{
-    display: none;
+.hide {
+  display: none;
 }
 
 #toolbar {
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;
-    display: flex;
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
 }
 
 #toolbar p {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 #search {
-    border-right: 1px solid #ddd;
-    padding-right: 1rem;
-    margin-right: 1rem;
-    width: 65%;
-    display: flex;
-    flex-direction: column;
+  border-right: 1px solid #ddd;
+  padding-right: 1rem;
+  margin-right: 1rem;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
 }
 
 #search form {
-    display: flex;
+  display: flex;
 }
 
 #search input {
-    width: 100%;
-    margin-right: 0.3rem;
+  width: 100%;
+  margin-right: 0.3rem;
 }
 
 #filter {
-    width: 35%;
-    display: flex;
-    flex-direction: column;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
 }
 
 #filter select {
-    flex: 1;
+  flex: 1;
 }
 
-
-
-.todo{
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.todo {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.icones{
-    display: flex;
-    flex-direction: row;
+.icones {
+  display: flex;
+  flex-direction: row;
 }
 
 .done {
-    background: #395169;
+  background: #395169;
 }
 
 .done p {
-    color: #fff;
-    text-decoration: line-through;
-    font-style: italic;
+  color: #fff;
+  text-decoration: line-through;
+  font-style: italic;
 }

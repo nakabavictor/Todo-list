@@ -45,15 +45,15 @@ const savetodo = (text) => {
   finishBTN.innerHTML = '<i class="fa-solid fa-check"></i>';
   icones.appendChild(finishBTN);
 
-  const ExcludeBTN = document.createElement("button");
-  ExcludeBTN.classList.add("delete");
-  ExcludeBTN.innerHTML = '<i class="fa-solid fa-x">';
-  icones.appendChild(ExcludeBTN);
-
   const EditBTN = document.createElement("button");
   EditBTN.classList.add("edit");
   EditBTN.innerHTML = '<i class="fa-solid fa-pen">';
   icones.appendChild(EditBTN);
+
+  const ExcludeBTN = document.createElement("button");
+  ExcludeBTN.classList.add("delete");
+  ExcludeBTN.innerHTML = '<i class="fa-solid fa-x">';
+  icones.appendChild(ExcludeBTN);
 
   todo.appendChild(icones);
 

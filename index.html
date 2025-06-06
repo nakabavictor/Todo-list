@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="js/javascript.js" defer></script>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <div class="todo-container">
-        <header>
-            <h1>Todo list</h1>
-        </header>
-        <form id="todo-form">
-            <p>Adicione uma nova tarefa:</p>
-            <div class="form-control">
-                <input type="text" id="todo-input" placeholder="O que você vai fazer?">
-                <button type="submit">
-                    <i class="fa fa-plus"></i>
-                </button>
-            </div>
-        </form>
-        <form id="todo-edit" class="hide">
-            <p>Edite:</p>
-            <div class="form-control">
-                <input type="text" id="input-edit" placeholder="O que você vai fazer?">
-                <button type="submit">
-                    <i class="fa-solid fa-check"></i>
-                </button>
-                <button type="submit">
-                    cancel
-                </button>
-            </div>
-        </form>
-        <div id="toolbar">
-            <div id="search">
-                <p>Pesquisar</p>
-                <input type="text" id="todo-pesquisar" placeholder="Buscar">
-            </div>
-            <div id="filter">
-                <p>Filtrar:</p>
-                <select id="filter-select">
-                    <option value="all">Todos</option>
-                    <option value="done">Feitos</option>
-                    <option value="todo">A fazer</option>
-                </select>
-            </div>
+      <header>
+        <h1>Todo list</h1>
+      </header>
+      <form id="todo-form">
+        <p>Adicione uma nova tarefa:</p>
+        <div class="form-control">
+          <input type="text" id="todo-input" placeholder="O que você vai fazer?" />
+          <button type="submit">
+            <i class="fa fa-plus"></i>
+          </button>
         </div>
-        <div id="todo-list">
-            <!--
+      </form>
+      <form id="todo-edit" class="hide">
+        <p>Edite:</p>
+        <div class="form-control">
+          <input type="text" id="input-edit" />
+          <button type="submit">
+            <i class="fa-solid fa-check"></i>
+          </button>
+          <button id="cancel-edit-btn" type="submit">cancel</button>
+        </div>
+      </form>
+      <div id="toolbar">
+        <div id="search">
+          <p>Pesquisar</p>
+          <input type="text" id="todo-pesquisar" placeholder="Buscar" />
+        </div>
+        <div id="filter">
+          <p>Filtrar:</p>
+          <select id="filter-select">
+            <option value="all">Todos</option>
+            <option value="done">Feitos</option>
+            <option value="todo">A fazer</option>
+          </select>
+        </div>
+      </div>
+      <div id="todo-list">
+        <!--
             <div class="todo">
                 <p>Exemplo minha tarefa</p>
                 <div class="icones">
@@ -68,7 +70,7 @@
                 
             </div>
             -->
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
