@@ -5,7 +5,7 @@ const editInput = document.querySelector("#input-edit");
 const todoList = document.querySelector("#todo-list");
 const toolbarr = document.querySelector("#toolbar");
 const cancelEditBtn = document.querySelector("#cancel-edit-btn");
-const searchInput = document.querySelector("#search-input");
+const searchInput = document.querySelector("#todo-pesquisar");
 const eraseBtn = document.querySelector("#erase-button");
 const filterBtn = document.querySelector("#filter-select");
 
@@ -25,6 +25,47 @@ const updateTodo = (text) => {
 
     if (todoTitle && todoTitle.innerText === inputAntigo) {
       todoTitle.innerText = text;
+    }
+  });
+};
+
+const searchTodos = (pesquisarTextos) => {
+  const todos = document.querySelectorAll(".todo");
+  todos.forEach((todo) => {
+    const todoTitle = todo.querySelector("p");
+    const todoTexto = todoTitle.innerText.toLowerCase();
+    const search = pesquisarTextos.toLowerCase();
+
+    if (todoTexto.includes(search)) {
+      todo.style.display = "flex";
+    } else {
+      todo.style.display = "none";
+    }
+  });
+};
+
+const filter = (filterVallue) => {
+  const todos = document.querySelectorAll(".todo");
+
+  todos.forEach((todo) => {
+    switch (filterValue) {
+      case "all":
+        todo.style.display = "flex";
+        break;
+      case "done":
+        if (todo.classList.contains("done")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+        break;
+      case "todo":
+        if (!todo.classList.contains("done")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+        break;
     }
   });
 };
@@ -116,4 +157,13 @@ editForm.addEventListener("submit", (e) => {
   }
 
   toggleForms();
+});
+
+searchInput.addEventListener("submit", (e) => {
+  e.preventDefault();
+  searchTodos();
+});
+
+filterBtn.addEventListener("change", (e) => {
+  filter();
 });
