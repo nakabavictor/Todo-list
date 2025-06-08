@@ -21,9 +21,9 @@ const updateTodo = (text) => {
   const todos = document.querySelectorAll(".todo");
 
   todos.forEach((todo) => {
-    let todoTitle = todo.querySelector("h3");
+    let todoTitle = todo.querySelector("p");
 
-    if (todoTitle.innerText === oldInputValue) {
+    if (todoTitle && todoTitle.innerText === inputAntigo) {
       todoTitle.innerText = text;
     }
   });
@@ -111,6 +111,7 @@ editForm.addEventListener("submit", (e) => {
   const editInputValue = editInput.value;
 
   if (editInputValue) {
+    console.log("era pra mudar!");
     updateTodo(editInputValue);
   }
 
