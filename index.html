@@ -39,13 +39,14 @@
         </div>
       </form>
       <div id="toolbar">
-        <form id="form-search">
-          <p>Apesquisar:</p>
-          <div class="form-control">
+        <div class="search">
+          <p>Pesquisar:</p>
+          <form id="form-search">
             <input type="text" id="todo-pesquisar" placeholder="Buscar" />
-            <button type="submit">Busca</button>
-          </div>
-        </form>
+            <button id="erase-button"><i class="fa-solid fa-delete-left"></i></button>
+          </form>
+        </div>
+
         <div id="filter">
           <p>Filtrar:</p>
           <select id="filter-select">

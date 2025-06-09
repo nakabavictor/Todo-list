@@ -29,47 +29,6 @@ const updateTodo = (text) => {
   });
 };
 
-const searchTodos = (pesquisarTextos) => {
-  const todos = document.querySelectorAll(".todo");
-  todos.forEach((todo) => {
-    const todoTitle = todo.querySelector("p");
-    const todoTexto = todoTitle.innerText.toLowerCase();
-    const search = pesquisarTextos.toLowerCase();
-
-    if (todoTexto.includes(search)) {
-      todo.style.display = "flex";
-    } else {
-      todo.style.display = "none";
-    }
-  });
-};
-
-const filter = (filterVallue) => {
-  const todos = document.querySelectorAll(".todo");
-
-  todos.forEach((todo) => {
-    switch (filterValue) {
-      case "all":
-        todo.style.display = "flex";
-        break;
-      case "done":
-        if (todo.classList.contains("done")) {
-          todo.style.display = "flex";
-        } else {
-          todo.style.display = "none";
-        }
-        break;
-      case "todo":
-        if (!todo.classList.contains("done")) {
-          todo.style.display = "flex";
-        } else {
-          todo.style.display = "none";
-        }
-        break;
-    }
-  });
-};
-
 const savetodo = (text) => {
   const todo = document.createElement("div");
   todo.classList.add("todo");
@@ -104,6 +63,46 @@ const savetodo = (text) => {
   todoInput.focus();
 };
 
+const searchTodos = (search) => {
+  const todos = document.querySelectorAll(".todo");
+
+  todos.forEach((todo) => {
+    const todoTitle = todo.querySelector("p").innerText.toLowerCase();
+    todo.style.display = "flex";
+    console.log(todoTitle);
+
+    if (!todoTitle.includes(search)) {
+      todo.style.display = "none";
+    }
+  });
+};
+
+const filter = (filterValue) => {
+  const todos = document.querySelectorAll(".todo");
+
+  todos.forEach((todo) => {
+    switch (filterValue) {
+      case "all":
+        todo.style.display = "flex";
+        break;
+      case "done":
+        if (todo.classList.contains("done")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+        break;
+      case "todo":
+        if (!todo.classList.contains("done")) {
+          todo.style.display = "flex";
+        } else {
+          todo.style.display = "none";
+        }
+        break;
+    }
+  });
+};
+
 //EVENTOS
 
 todoForm.addEventListener("submit", (e) => {
@@ -124,7 +123,6 @@ document.addEventListener("click", (e) => {
   if (parente && parente.querySelector("p")) {
     todoTitle = parente.querySelector("p").innerText;
   }
-
   if (elementoBuscado.classList.contains("finish")) {
     console.log("clicou pra finalizar");
     parente.classList.toggle("done");
@@ -159,11 +157,18 @@ editForm.addEventListener("submit", (e) => {
   toggleForms();
 });
 
-searchInput.addEventListener("submit", (e) => {
+searchInput.addEventListener("keyup", (e) => {
+  const search = e.target.value;
+  searchTodos(search);
+});
+
+eraseBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  searchTodos();
+  searchInput.value = "";
+  searchInput.dispatchEvent(new Event("keyup"));
 });
 
 filterBtn.addEventListener("change", (e) => {
-  filter();
+  const search = e.target.value;
+  filter(search);
 });
