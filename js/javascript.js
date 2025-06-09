@@ -69,7 +69,6 @@ const searchTodos = (search) => {
   todos.forEach((todo) => {
     const todoTitle = todo.querySelector("p").innerText.toLowerCase();
     todo.style.display = "flex";
-    console.log(todoTitle);
 
     if (!todoTitle.includes(search)) {
       todo.style.display = "none";
@@ -110,7 +109,6 @@ todoForm.addEventListener("submit", (e) => {
 
   const inputValue = todoInput.value;
   if (inputValue) {
-    console.log(inputValue);
     savetodo(inputValue);
   }
 });
@@ -124,15 +122,12 @@ document.addEventListener("click", (e) => {
     todoTitle = parente.querySelector("p").innerText;
   }
   if (elementoBuscado.classList.contains("finish")) {
-    console.log("clicou pra finalizar");
     parente.classList.toggle("done");
   }
   if (elementoBuscado.classList.contains("delete")) {
-    console.log("clicou pra excluir");
     parente.remove();
   }
   if (elementoBuscado.classList.contains("edit")) {
-    console.log("clicou pra editar");
     toggleForms();
     editInput.value = todoTitle;
     inputAntigo = todoTitle;
@@ -150,7 +145,6 @@ editForm.addEventListener("submit", (e) => {
   const editInputValue = editInput.value;
 
   if (editInputValue) {
-    console.log("era pra mudar!");
     updateTodo(editInputValue);
   }
 
